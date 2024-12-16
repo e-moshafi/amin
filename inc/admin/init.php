@@ -1,3 +1,6 @@
 <?php
+//setting website
 // include genral setting 
 require_once('settings/genral.php');
+// include header setting 
+require_once('settings/display_header_footer.php');
