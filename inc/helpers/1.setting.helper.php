@@ -1,6 +1,18 @@
 <?php
-class AMINSettingHelper{
-    public function get_setting($key){
-       return fw_get_db_settings_option($key);
+class AMINSettingHelper
+{
+    public $settings = [];
+    public function get_settings($key)
+    {
+        $settings = get_option($key);
+        $this->settings = $settings;
+        return $settings;
+    }
+    public function get_field($id, $default = false)
+    {
+        if (isset($this->settings[$id]) && !empty($this->settings[$id])) {
+            return $this->settings[$id];
+        }
+        return $default;
     }
 }
