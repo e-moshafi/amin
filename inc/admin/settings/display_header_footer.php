@@ -1,138 +1,138 @@
 <?php
 add_action('cmb2_admin_init', function () {
-    $option_key = "display_settings_ahoo";
+    $option_key = "display_settings_amin";
     $cmb = new_cmb2_box(array(
         'id'           => $option_key . '_metabox',
-        'title'        => esc_html__('Display Settings', 'ahoo'),
+        'title'        => esc_html__('Display Settings', 'amin'),
         'object_types' => array('options-page'),
         'option_key'   => $option_key,
-        'parent_slug' => 'general_ahoo',
+        'parent_slug' => 'general_amin',
     ));
     $cmb->add_field(array(
-        'name' => esc_html__('Top header', 'ahoo'),
+        'name' => esc_html__('Top header', 'amin'),
         'id'   => $option_key . '_top_header_style_title',
         'type' => 'title',
     ));
     $cmb->add_field(array(
-        'name' => esc_html__('Display top bar ', 'ahoo'),
+        'name' => esc_html__('Display top bar ', 'amin'),
         'id'   => $option_key . '_display_top_bar',
         'type' => 'checkbox',
     ));
     $cmb->add_field(array(
-        'name' => esc_html__('Style', 'ahoo'),
+        'name' => esc_html__('Style', 'amin'),
         'id' => $option_key . '_top_bar_style',
         'type' => 'select',
         'default' => 'light_mod',
         'options' => [
-            'light_mod' => __('Light mode', 'ahoo'),
-            'dark_mod' => __('Dark mode', 'ahoo'),
+            'light_mod' => __('Light mode', 'amin'),
+            'dark_mod' => __('Dark mode', 'amin'),
         ]
     ));
     $cmb->add_field([
-        'name' => __('Right position', 'ahoo'),
-        'desc' => __('The style of the right position', 'ahoo'),
+        'name' => __('Right position', 'amin'),
+        'desc' => __('The style of the right position', 'amin'),
         'id' => $option_key . '_top_bar_right_position',
         'type' => 'select',
         'default' => 'menu',
         'options' => [
-            'menu' => __('Show menu', 'ahoo'),
-            'email' => __('Show Email', 'ahoo'),
-            'phone' => __('Show phone number', 'ahoo')
+            'menu' => __('Show menu', 'amin'),
+            'email' => __('Show Email', 'amin'),
+            'phone' => __('Show phone number', 'amin')
         ]
 
     ]);
     $cmb->add_field([
-        'name' => __('Email', 'ahoo'),
+        'name' => __('Email', 'amin'),
         'id' => $option_key . '_top_bar_email',
         'type' => 'text_email'
     ]);
     $cmb->add_field([
-        'name' => __('Phone number', 'ahoo'),
+        'name' => __('Phone number', 'amin'),
         'id' => $option_key . '_top_bar_phone_number',
         'type' => 'text'
     ]);
     $cmb->add_field([
-        'name' => __('Header', 'ahoo'),
+        'name' => __('Header', 'amin'),
         'id' => $option_key . '_header',
         'type' => 'title'
     ]);
     $cmb->add_field([
-        'name' => __('Style', 'ahoo'),
+        'name' => __('Style', 'amin'),
         'id' => $option_key . '_header_style',
         'type' => 'select',
         'default' => 'light_mod',
         'options' => [
-            'light_mod' => __('Light mode', 'ahoo'),
-            'dark_mod' => __('Dark mode', 'ahoo'),
+            'light_mod' => __('Light mode', 'amin'),
+            'dark_mod' => __('Dark mode', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Sticky header', 'ahoo'),
+        'name' => __('Sticky header', 'amin'),
         'id' => $option_key . '_stick_header',
         'type' => 'checkbox',
         'default' => 1
     ]);
     $cmb->add_field([
-        'name' => __('Header style', 'ahoo'),
+        'name' => __('Header style', 'amin'),
         'id' => $option_key . '_header_width_style',
         'type' => 'select',
         'default' => 'classic',
         'options' => [
-            'classic' => __('Classic', 'ahoo'),
-            'modern' => __('Modern', 'ahoo'),
+            'classic' => __('Classic', 'amin'),
+            'modern' => __('Modern', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Menu style', 'ahoo'),
-        'desc' => __('Menu style in desktop mode', 'ahoo'),
+        'name' => __('Menu style', 'amin'),
+        'desc' => __('Menu style in desktop mode', 'amin'),
         'id' => $option_key . '_desktop_header_menu_style',
         'type' => 'select',
         'default' => 'classic',
         'options' => [
-            'classic' => __('Classic', 'ahoo'),
-            'modern' => __('Modern', 'ahoo'),
+            'classic' => __('Classic', 'amin'),
+            'modern' => __('Modern', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Logo Position', 'ahoo'),
+        'name' => __('Logo Position', 'amin'),
         'id' => $option_key . '_header_logo_position',
         'type' => 'select',
         'default' => 'right',
         'options' => [
-            'right' => __('Right', 'ahoo'),
-            'middle' => __('Middle', 'ahoo'),
-            'left' => __('Left', 'ahoo'),
+            'right' => __('Right', 'amin'),
+            'middle' => __('Middle', 'amin'),
+            'left' => __('Left', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Login action', 'ahoo'),
-        'desc' => __('How to login', 'ahoo'),
+        'name' => __('Login action', 'amin'),
+        'desc' => __('How to login', 'amin'),
         'id' => $option_key . '_login_action',
         'type' => 'select',
         'default' => 'popup',
         'options' => [
-            'popup' => __('Popup', 'ahoo'),
-            'classic' => __('Classic', 'ahoo'),
+            'popup' => __('Popup', 'amin'),
+            'classic' => __('Classic', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Footer', 'ahoo'),
+        'name' => __('Footer', 'amin'),
         'id' => $option_key . '_footer',
         'type' => 'title'
     ]);
     $cmb->add_field([
-        'name' => __('Style', 'ahoo'),
+        'name' => __('Style', 'amin'),
         'id' => $option_key . '_footer_style',
         'type' => 'select',
         'default' => 'light_mod',
         'options' => [
-            'light_mod' => __('Light mode', 'ahoo'),
-            'dark_mod' => __('Dark mode', 'ahoo'),
+            'light_mod' => __('Light mode', 'amin'),
+            'dark_mod' => __('Dark mode', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Style column', 'ahoo'),
-        'desc' => __('Number of footer columns', 'ahoo'),
+        'name' => __('Style column', 'amin'),
+        'desc' => __('Number of footer columns', 'amin'),
         'id' => $option_key . '_footer_style_column',
         'type' => 'select',
         'default' => '3',
@@ -144,55 +144,55 @@ add_action('cmb2_admin_init', function () {
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Copyright position', 'ahoo'),
+        'name' => __('Copyright position', 'amin'),
         'id' => $option_key . '_footer_copyright_position',
         'type' => 'select',
         'default' => 'middle',
         'options' => [
-            'right' => __('Right', 'ahoo'),
-            'middle' => __('Middle', 'ahoo'),
-            'left' => __('Left', 'ahoo'),
+            'right' => __('Right', 'amin'),
+            'middle' => __('Middle', 'amin'),
+            'left' => __('Left', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Posts', 'ahoo'),
+        'name' => __('Posts', 'amin'),
         'id' => $option_key . '_posts',
         'type' => 'title'
     ]);
     $cmb->add_field([
-        'name' => __('Pagination style', 'ahoo'),
+        'name' => __('Pagination style', 'amin'),
         'id' => $option_key . '_posts_pagintion_style',
         'type' => 'select',
         'default' => 'classic',
         'options' => [
-            'classic' => __('Classic', 'ahoo'),
-            'modern' => __('Modern', 'ahoo'),
+            'classic' => __('Classic', 'amin'),
+            'modern' => __('Modern', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Sidebar position', 'ahoo'),
+        'name' => __('Sidebar position', 'amin'),
         'id' => $option_key . '_footer_sidebar_position',
         'type' => 'select',
         'default' => 'left',
         'options' => [
-            'right' => __('Right', 'ahoo'),
-            'both_sides' => __('both sides', 'ahoo'),
-            'left' => __('Left', 'ahoo'),
+            'right' => __('Right', 'amin'),
+            'both_sides' => __('both sides', 'amin'),
+            'left' => __('Left', 'amin'),
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Page', 'ahoo'),
+        'name' => __('Page', 'amin'),
         'id' => $option_key . '_page',
         'type' => 'title'
     ]);
     $cmb->add_field([
-        'name'=>__('Show Title', 'ahoo'),
+        'name'=>__('Show Title', 'amin'),
         'id'=>$option_key.'page_show_title',
         'type'=>'checkbox',
         'default' =>1
     ]);
     $cmb->add_field([
-        'name'=>__('Container', 'ahoo'),
+        'name'=>__('Container', 'amin'),
         'id'=>$option_key.'page_container',
         'type'=>'checkbox',
         'default' =>1
