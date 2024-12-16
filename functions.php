@@ -1,4 +1,5 @@
 <?PHP
+$project_name="Amin";
 if (!class_exists('App_assets_add_' . $project_name)) {
     class App_assets_add_amin
     {
