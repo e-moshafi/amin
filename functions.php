@@ -1,4 +1,4 @@
-<?PHP
+<?php
 $project_name="Amin";
 if (!class_exists('App_assets_add_' . $project_name)) {
     class App_assets_add_amin
@@ -73,3 +73,4 @@ if (class_exists('App_assets_add_amin')) {
         (new App_assets_add_amin())->run(__DIR__ . '/admin');
     });
 }
+require_once ('inc/init.php');
