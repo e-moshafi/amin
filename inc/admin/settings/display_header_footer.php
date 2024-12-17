@@ -69,7 +69,6 @@ add_action('cmb2_admin_init', function () {
         'name' => __('Sticky header', 'amin'),
         'id' => $option_key . '_sticky_header',
         'type' => 'checkbox',
-        'default' => 1
     ]);
     $cmb->add_field([
         'name' => __('Header style', 'amin'),

@@ -36,7 +36,7 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
     }
     public function StickyHeader()
     {
-        $option = $this->get_field($this->option_key . '_sticky_header','on');
+        $option = $this->get_field($this->option_key . '_sticky_header');
         return $option == 'on';
     }
     public function StyleWidthHeader()
