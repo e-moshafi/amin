@@ -135,6 +135,7 @@ add_action('cmb2_admin_init', function () {
         'type' => 'select',
         'default' => '3',
         'options' => [
+            1 => 1,
             2 => 2,
             3 => 3,
             4 => 4,
@@ -152,6 +153,11 @@ add_action('cmb2_admin_init', function () {
             'left' => __('Left', 'amin'),
         ]
     ]);
+    $cmb->add_field(array(
+        'name' => esc_html__('Display Social NetWork In Footer ', 'amin'),
+        'id'   => $option_key . '_display_social_footer',
+        'type' => 'checkbox',
+    ));
     $cmb->add_field([
         'name' => __('Posts', 'amin'),
         'id' => $option_key . '_posts',
@@ -184,15 +190,15 @@ add_action('cmb2_admin_init', function () {
         'type' => 'title'
     ]);
     $cmb->add_field([
-        'name'=>__('Show Title', 'amin'),
-        'id'=>$option_key.'page_show_title',
-        'type'=>'checkbox',
-        'default' =>1
+        'name' => __('Show Title', 'amin'),
+        'id' => $option_key . 'page_show_title',
+        'type' => 'checkbox',
+        'default' => 1
     ]);
     $cmb->add_field([
-        'name'=>__('Container', 'amin'),
-        'id'=>$option_key.'page_container',
-        'type'=>'checkbox',
-        'default' =>1
+        'name' => __('Container', 'amin'),
+        'id' => $option_key . 'page_container',
+        'type' => 'checkbox',
+        'default' => 1
     ]);
 });

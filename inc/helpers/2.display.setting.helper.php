@@ -53,6 +53,11 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_footer_copyright_position');
         return $option;
     }
+    public function DisplaySocialFooter()
+    {
+        $option = $this->get_field($this->option_key . '_display_social_footer');
+        return $option == 'on';
+    }
 }
 function NEWAMINDisplaySetting()
 {
