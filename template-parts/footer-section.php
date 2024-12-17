@@ -70,17 +70,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
             <div class="row">
                 <?php if ($DisplaySetting->DisplaySocialFooter()): ?>
                     <div class="col-lg">
-                        <div class="social-icons social-icons-colored float-left">
-                            <ul>
-                                <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
-                                <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
-                                <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                <li class="social-gplus"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                            </ul>
-                        </div>
+                        <?php get_template_part('template-parts/footer/item/social'); ?>
                     </div>
                 <?php endif; ?>
                 <div class="col-lg">
