@@ -28,4 +28,4 @@
             get_template_part('template-parts/topbar', 'section');
         }
         ?>
-       
+        <?php get_template_part('template-parts/header', 'section'); ?>
