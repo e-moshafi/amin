@@ -10,3 +10,7 @@ class AMINGenralSettingHelper extends AMINSettingHelper{
         return $option;
     }
 }
+function NEWAMINGenralSettingHelper()
+{
+    return new AMINGenralSettingHelper();
+}
