@@ -44,6 +44,11 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_header_width_style');
         return $option;
     }
+    public function StyleFooter()
+    {
+        $option = $this->get_field($this->option_key . '_footer_style');
+        return $option;
+    }
 }
 function NEWAMINDisplaySetting()
 {

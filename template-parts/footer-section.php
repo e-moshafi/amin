@@ -1,4 +1,7 @@
-<footer id="footer">
+<?php 
+$DisplaySetting = NEWAMINDisplaySetting();
+?>
+<footer id="footer" class="<?php if ($DisplaySetting->StyleFooter() == 'dark_mod') echo 'inverted'; ?>">
     <div class="footer-content">
         <div class="container">
             <div class="row">
