@@ -4,7 +4,7 @@ $light_logo = $GenralSettingHelper->get_logo();
 $dark_logo = $GenralSettingHelper->get_logo('dark');
 ?>
 <div id="logo">
-    <a href="index.html">
+    <a href="<?php echo bloginfo('siteurl') ?>">
         <?php if (!empty($light_logo)): ?>
             <img src="<?php echo $light_logo ?>" class="logo-default" alt="<?php echo bloginfo('name') ?>">
         <?php else: ?>
