@@ -1,8 +1,8 @@
 <?php
-$AMINDisplaySetting = NEWAMINDisplaySetting();
-$RightPosition = $AMINDisplaySetting->RightPositionTopBar();
+$DisplaySetting = NEWAMINDisplaySetting();
+$RightPosition = $DisplaySetting->RightPositionTopBar();
 ?>
-<div id="topbar" class="<?php if ($AMINDisplaySetting->StyleTopBar() == 'dark_mod') echo 'dark'; ?> d-none d-xl-block d-lg-block topbar-fullwidth">
+<div id="topbar" class="<?php if ($DisplaySetting->StyleTopBar() == 'dark_mod') echo 'dark'; ?> d-none d-xl-block d-lg-block topbar-fullwidth">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
