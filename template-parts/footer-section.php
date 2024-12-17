@@ -7,7 +7,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
             <div class="row">
                 <?php for ($i = 1; $i <= $DisplaySetting->FooterStyleColumn(); $i++): ?>
                     <div class="col-lg">
-                        <?php get_template_part('template-parts/footer/item/widget', 'section', ['number', $i]) ?>
+                        <?php get_template_part('template-parts/footer/item/widget', 'section', ['number'=> $i]) ?>
                     </div>
                 <?php endfor; ?>
             </div>
