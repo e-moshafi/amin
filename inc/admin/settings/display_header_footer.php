@@ -145,10 +145,10 @@ add_action('cmb2_admin_init', function () {
         'name' => __('Copyright position', 'amin'),
         'id' => $option_key . '_footer_copyright_position',
         'type' => 'select',
-        'default' => 'middle',
+        'default' => 'center',
         'options' => [
             'right' => __('Right', 'amin'),
-            'middle' => __('Middle', 'amin'),
+            'center' => __('Center', 'amin'),
             'left' => __('Left', 'amin'),
         ]
     ]);

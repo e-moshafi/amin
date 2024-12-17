@@ -64,9 +64,5 @@ $DisplaySetting = NEWAMINDisplaySetting();
             </div>
         </div>
     </div>
-    <div class="copyright-content">
-        <div class="container">
-            <div class="copyright-text text-center">&copy; کپی رایت 2019 پولو - تمامی حقوق محفوظ است </div>
-        </div>
-    </div>
+  <?php get_template_part('template-parts/footer/item/copyright'); ?>
 </footer>

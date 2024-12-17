@@ -49,6 +49,10 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_footer_style');
         return $option;
     }
+    public function CopyRightPostion(){
+        $option = $this->get_field($this->option_key . '_footer_copyright_position');
+        return $option;
+    }
 }
 function NEWAMINDisplaySetting()
 {
