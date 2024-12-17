@@ -1,4 +1,3 @@
-<div class="header-extras">
     <ul>
         <li>
             <a id="btn-search" href="#"> <i class="icon-search"></i></a>
@@ -14,4 +13,3 @@
                         </div>
                     </li> -->
     </ul>
-</div>

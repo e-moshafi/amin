@@ -11,9 +11,10 @@ $DisplaySetting = NEWAMINDisplaySetting();
 
             <?php get_template_part('template-parts/header/item/search', 'form') ?>
 
+            <div class="header-extras">
 
-            <?php get_template_part('template-parts/header/item/buttons', 'menu') ?>
-       
+                <?php get_template_part('template-parts/header/item/buttons', 'menu') ?>
+            </div>
 
             <?php get_template_part('template-parts/header/item/main', 'menu') ?>
 
