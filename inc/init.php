@@ -44,6 +44,7 @@ if (!class_exists('App_dir_require_once_' . $project_name)) {
         {
             $files = [];
             $remove_array = array('.', '..');
+            if (file_exists($dir)) return $files;
             foreach (array_diff(scandir($dir), $remove_array) as $file) {
                 if (is_dir($dir . "/" . $file)) {
                     $dir_files = $this->get_dir($dir . "/" . $file);
@@ -101,7 +102,7 @@ if (!class_exists('App_dir_require_once_' . $project_name)) {
                 $search_dir = $this->get_dir($dir);
             }
             foreach ($search_dir as $file) {
-                require_once ($file);
+                require_once($file);
             }
         }
     }
