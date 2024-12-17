@@ -1,6 +1,8 @@
-<ul class="top-menu">
-    <li><a href="#">درباره ما</a></li>
-    <li><a href="#">ویژگی ها</a></li>
-    <li><a href="#">پلن فروش</a></li>
-    <li><a href="#">مقررات</a></li>
-</ul>
+<?php
+wp_nav_menu(
+    array(
+        'theme_location' => 'topbar-menu',
+        'container' => 'ul',
+        'menu_class' => 'top-menu',
+    )
+);
