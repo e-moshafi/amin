@@ -58,6 +58,10 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_display_social_footer');
         return $option == 'on';
     }
+    public function FooterStyleColumn(){
+        $option = $this->get_field($this->option_key . '_footer_style_column',3);
+        return $option;
+    }
 }
 function NEWAMINDisplaySetting()
 {
