@@ -9,6 +9,10 @@ class AMINGenralSettingHelper extends AMINSettingHelper{
         $option = $this->get_field($this->option_key . '_'.$social);
         return $option;
     }
+    public function get_logo($mode='light'){
+        $option=$this->get_field( $mode."_logo");
+        return $option;
+    }
 }
 function NEWAMINGenralSettingHelper()
 {
