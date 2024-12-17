@@ -29,6 +29,21 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_top_bar_email');
         return $option;
     }
+    public function StyleHeader()
+    {
+        $option = $this->get_field($this->option_key . '_header_style');
+        return $option;
+    }
+    public function StickyHeader()
+    {
+        $option = $this->get_field($this->option_key . '_sticky_header','on');
+        return $option == 'on';
+    }
+    public function StyleWidthHeader()
+    {
+        $option = $this->get_field($this->option_key . '_header_width_style');
+        return $option;
+    }
 }
 function NEWAMINDisplaySetting()
 {
