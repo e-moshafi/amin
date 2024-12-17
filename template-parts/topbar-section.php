@@ -1,16 +1,18 @@
 <?php
-$AMINDisplaySetting=NEWAMINDisplaySetting();
+$AMINDisplaySetting = NEWAMINDisplaySetting();
+$RightPosition = $AMINDisplaySetting->RightPositionTopBar();
 ?>
-<div id="topbar" class="<?php if($AMINDisplaySetting->StyleTopBar()=='dark_mod') echo 'dark'; ?> d-none d-xl-block d-lg-block topbar-fullwidth">
+<div id="topbar" class="<?php if ($AMINDisplaySetting->StyleTopBar() == 'dark_mod') echo 'dark'; ?> d-none d-xl-block d-lg-block topbar-fullwidth">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <ul class="top-menu">
-                    <li><a href="#">درباره ما</a></li>
-                    <li><a href="#">ویژگی ها</a></li>
-                    <li><a href="#">پلن فروش</a></li>
-                    <li><a href="#">مقررات</a></li>
-                </ul>
+                <?php
+                if ($RightPosition == 'menu') {
+                    get_template_part('template-parts/topbar/menu');
+                } else {
+                    get_template_part('template-parts/topbar/email_phone');
+                }
+                ?>
             </div>
             <div class="col-md-6 d-none d-sm-block">
                 <div class="social-icons social-icons-colored-hover">

@@ -8,8 +8,26 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
     }
     public function DisplayTopBar()
     {
-        $option = $this->get_field('display_settings_amin_display_top_bar');
+        $option = $this->get_field($this->option_key . '_display_top_bar');
         return $option == 'on';
+    }
+    public function StyleTopBar()
+    {
+        $option = $this->get_field($this->option_key . '_top_bar_style');
+        return $option;
+    }
+    public function RightPositionTopBar()
+    {
+        $option = $this->get_field($this->option_key . '_top_bar_right_position');
+        return $option;
+    }
+    public function PhoneTopBar(){
+        $option = $this->get_field($this->option_key . '_top_bar_phone_number');
+        return $option;
+    }
+    public function EmailTopBar(){
+        $option = $this->get_field($this->option_key . '_top_bar_email');
+        return $option;
     }
 }
 function NEWAMINDisplaySetting()

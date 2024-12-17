@@ -36,8 +36,7 @@ add_action('cmb2_admin_init', function () {
         'default' => 'menu',
         'options' => [
             'menu' => __('Show menu', 'amin'),
-            'email' => __('Show Email', 'amin'),
-            'phone' => __('Show phone number', 'amin')
+            'email_phone' => __('Show Email & phone', 'amin'),
         ]
 
     ]);
