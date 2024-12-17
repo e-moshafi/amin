@@ -6,17 +6,17 @@ class AMINGenralSettingHelper extends AMINSettingHelper
     {
         $this->settings = $this->get_settings($this->option_key);
     }
-    public function get_link_social($social)
+    public function GetSocialLink($social)
     {
         $option = $this->get_field($this->option_key . '_' . $social);
         return $option;
     }
-    public function get_logo($mode = 'light')
+    public function GetLogo($mode = 'light')
     {
         $option = $this->get_field($mode . "_logo");
         return $option;
     }
-    public function copyright_text()
+    public function CopyRightText()
     {
         $option = $this->get_field("footer_copyright",'center');
         return $option;

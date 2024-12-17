@@ -1,7 +1,7 @@
 <?php
 $GenralSettingHelper = NEWAMINGenralSettingHelper();
-$light_logo = $GenralSettingHelper->get_logo();
-$dark_logo = $GenralSettingHelper->get_logo('dark');
+$light_logo = $GenralSettingHelper->GetLogo();
+$dark_logo = $GenralSettingHelper->GetLogo('dark');
 ?>
 <div id="logo">
     <a href="<?php echo bloginfo('siteurl') ?>">
