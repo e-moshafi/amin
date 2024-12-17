@@ -81,17 +81,6 @@ add_action('cmb2_admin_init', function () {
         ]
     ]);
     $cmb->add_field([
-        'name' => __('Menu style', 'amin'),
-        'desc' => __('Menu style in desktop mode', 'amin'),
-        'id' => $option_key . '_desktop_header_menu_style',
-        'type' => 'select',
-        'default' => 'classic',
-        'options' => [
-            'classic' => __('Classic', 'amin'),
-            'modern' => __('Modern', 'amin'),
-        ]
-    ]);
-    $cmb->add_field([
         'name' => __('Logo Position', 'amin'),
         'id' => $option_key . '_header_logo_position',
         'type' => 'select',
