@@ -13924,12 +13924,18 @@ ul.nav li.dropdown:hover>ul.dropdown-menu {
 .social-icons.social-icons-colored-hover .social-xing a:hover {
     background-color: #1a8e8c
 }
-
+.social-icons.social-icons-colored .social-whatsapp a,
+.social-icons.social-icons-colored-hover .social-whatsapp a:hover {
+    background-color: #45ad76
+}
 .social-icons.social-icons-colored .social-wikipedia a,
 .social-icons.social-icons-colored-hover .social-wikipedia a:hover {
     background-color: #b3b5b8
 }
-
+.social-icons.social-icons-colored .social-telegram a,
+.social-icons.social-icons-colored-hover .social-telegram a:hover {
+    background-color: #3f91cb
+}
 .social-icons.social-icons-border li a {
     border: 1px solid #d7d7d7;
     background: 0 0;
