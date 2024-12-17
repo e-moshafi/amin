@@ -32,6 +32,10 @@ if (!class_exists('App_dir_require_once_' . $project_name)) {
                     'direction' => __DIR__ . '/helpers',
                     'access' => false
                 ],
+                [
+                    'direction' => __DIR__ . '/hooks',
+                    'access' => false
+                ],
 
             ];
             return $access;
