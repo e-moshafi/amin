@@ -84,15 +84,23 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_footer_style_column', 3);
         return $option;
     }
-    public function PageShowTitle()
+    public function PageShowTitle($ID = 0)
     {
-        $option = $this->get_field($this->option_key . 'page_show_title');
-        return $option=='on';
+        if ($ID == 0) $ID = get_the_ID();
+        $option = get_post_meta($ID, 'page_show_title', 1);
+        if (empty($option)) {
+            $option = $this->get_field($this->option_key . 'page_show_title');
+        }
+        return $option == 'on';
     }
-    public function PageContainer()
+    public function PageContainer($ID = 0)
     {
-        $option = $this->get_field($this->option_key . 'page_container');
-        return $option=='on';
+        if ($ID == 0) $ID = get_the_ID();
+        $option = get_post_meta($ID, 'page_container', 1);
+        if (empty($option)) {
+            $option = $this->get_field($this->option_key . 'page_container');
+        }
+        return $option == 'on';
     }
 }
 function NEWAMINDisplaySetting()
