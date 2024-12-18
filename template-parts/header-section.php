@@ -2,7 +2,7 @@
 $DisplaySetting = NEWAMINDisplaySetting();
 
 ?>
-<header id="header" class="<?php if ($DisplaySetting->StyleWidthHeader() == 'modern') echo 'header-modern'; ?> <?php if (!$DisplaySetting->StickyHeader()) echo 'header-disable-fixed'; ?> <?php if ($DisplaySetting->StyleHeader() == 'dark_mod') echo 'dark'; ?>" data-fullwidth="<?php $DisplaySetting->StyleWidthHeader() != 'modern' ? 'true' : 'false' ?>">
+<header id="header" class="<?php if ($DisplaySetting->StyleWidthHeader() == 'modern') echo 'header-modern'; ?> <?php if (!$DisplaySetting->StickyHeader()) echo 'header-disable-fixed'; ?> <?php if ($DisplaySetting->StyleHeader() == 'dark_mod') echo 'dark'; ?>" data-fullwidth="<?php echo $DisplaySetting->StyleWidthHeader() != 'modern' ? 'true' : 'false' ?>">
     <div class="header-inner">
         <div class="container">
 
