@@ -84,6 +84,16 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_footer_style_column', 3);
         return $option;
     }
+    public function PageShowTitle()
+    {
+        $option = $this->get_field($this->option_key . 'page_show_title');
+        return $option=='on';
+    }
+    public function PageContainer()
+    {
+        $option = $this->get_field($this->option_key . 'page_container');
+        return $option=='on';
+    }
 }
 function NEWAMINDisplaySetting()
 {

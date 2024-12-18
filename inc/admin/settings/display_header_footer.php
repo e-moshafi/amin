@@ -182,12 +182,10 @@ add_action('cmb2_admin_init', function () {
         'name' => __('Show Title', 'amin'),
         'id' => $option_key . 'page_show_title',
         'type' => 'checkbox',
-        'default' => 1
     ]);
     $cmb->add_field([
         'name' => __('Container', 'amin'),
         'id' => $option_key . 'page_container',
         'type' => 'checkbox',
-        'default' => 1
     ]);
 });
