@@ -21,11 +21,13 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_top_bar_right_position');
         return $option;
     }
-    public function PhoneTopBar(){
+    public function PhoneTopBar()
+    {
         $option = $this->get_field($this->option_key . '_top_bar_phone_number');
         return $option;
     }
-    public function EmailTopBar(){
+    public function EmailTopBar()
+    {
         $option = $this->get_field($this->option_key . '_top_bar_email');
         return $option;
     }
@@ -44,12 +46,31 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_header_width_style');
         return $option;
     }
+    public function LogoPositionHeader()
+    {
+        $option = $this->get_field($this->option_key . '_header_logo_position');
+        return $option;
+    }
+    public function LogoPositionHeaderCssClass()
+    {
+        $LogoPositionHeader = $this->LogoPositionHeader();
+        switch ($LogoPositionHeader) {
+            case 'left':
+                return 'header-logo-right';
+                break;
+            case 'middle':
+                return 'header-logo-center';
+                break;
+        }
+        return '';
+    }
     public function StyleFooter()
     {
         $option = $this->get_field($this->option_key . '_footer_style');
         return $option;
     }
-    public function CopyRightPostion(){
+    public function CopyRightPostion()
+    {
         $option = $this->get_field($this->option_key . '_footer_copyright_position');
         return $option;
     }
@@ -58,8 +79,9 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_display_social_footer');
         return $option == 'on';
     }
-    public function FooterStyleColumn(){
-        $option = $this->get_field($this->option_key . '_footer_style_column',3);
+    public function FooterStyleColumn()
+    {
+        $option = $this->get_field($this->option_key . '_footer_style_column', 3);
         return $option;
     }
 }
