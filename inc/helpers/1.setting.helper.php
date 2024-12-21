@@ -10,7 +10,7 @@ class AMINSettingHelper
     }
     public function get_field($id, $default = false)
     {
-        if (isset($this->settings[$id]) && !empty($this->settings[$id])) {
+        if (isset($this->settings[$id])) {
             return $this->settings[$id];
         }
         return $default;
