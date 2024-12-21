@@ -102,6 +102,35 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         }
         return $option == 'on';
     }
+    public function PostsStyle()
+    {
+        $option = $this->get_field($this->option_key . '_posts_style', 'ThreeCol');
+        return $option;
+    }
+    public function PostsStyleClassCss()
+    {
+        $option = $this->PostsStyle();
+        switch ($option) {
+            case "OneCol":
+                $class = "post-1-columns";
+                break;
+            case "TwoCol":
+                $class = "post-2-columns";
+                break;
+            case "ThreeCol":
+                $class = "post-3-columns";
+                break;
+            case "FourCol":
+                $class = "post-4-columns";
+                break;
+            case "modern":
+                $class = "post-thumbnails post-1-columns";
+                break;
+            default:
+                $class = "post-3-columns";
+        }
+        return $class;
+    }
 }
 function NEWAMINDisplaySetting()
 {

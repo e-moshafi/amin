@@ -1,7 +1,7 @@
 <?php
 global $wp_query;
 ?>
-<div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
+<div id="blog" class="grid-layout  <?php echo NEWAMINDisplaySetting()->PostsStyleClassCss()  ?> m-b-30" data-item="post-item">
 
 
     <?php

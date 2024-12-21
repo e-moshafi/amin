@@ -153,6 +153,20 @@ add_action('cmb2_admin_init', function () {
         'type' => 'title'
     ]);
     $cmb->add_field([
+        'name' => __('style', 'amin'),
+        'id' => $option_key . '_posts_style',
+        'type' => 'select',
+        'default' => 'ThreeCol',
+        'options' => [
+            'modern' => __('Modern', 'amin'),
+            'OneCol' => __('Single column', 'amin'),
+            'TwoCol' => __('Two column', 'amin'),
+            'ThreeCol' => __('Three column', 'amin'),
+            'FourCol' => __('Four column', 'amin'),
+
+        ]
+    ]);
+    $cmb->add_field([
         'name' => __('Pagination style', 'amin'),
         'id' => $option_key . '_posts_pagintion_style',
         'type' => 'select',
@@ -168,6 +182,7 @@ add_action('cmb2_admin_init', function () {
         'type' => 'select',
         'default' => 'left',
         'options' => [
+            'none'=>__('None','amin'),
             'right' => __('Right', 'amin'),
             'both_sides' => __('both sides', 'amin'),
             'left' => __('Left', 'amin'),
