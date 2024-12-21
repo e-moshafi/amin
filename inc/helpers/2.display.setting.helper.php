@@ -157,6 +157,11 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         }
         return $allow;
     }
+    public function StickySidebar()
+    {
+        $option = $this->get_field($this->option_key . '_sidebar_sticky');
+        return $option == 'on';
+    }
 }
 function NEWAMINDisplaySetting()
 {

@@ -189,6 +189,11 @@ add_action('cmb2_admin_init', function () {
         ]
     ]);
     $cmb->add_field([
+        'name' => __('Sticky Sidebar', 'amin'),
+        'id' => $option_key . '_sidebar_sticky',
+        'type' => 'checkbox',
+    ]);
+    $cmb->add_field([
         'name' => __('Page', 'amin'),
         'id' => $option_key . '_page',
         'type' => 'title'
