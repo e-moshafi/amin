@@ -1,4 +1,4 @@
-<div class="sidebar sticky-sidebar col-lg-3">
+<div class="sidebar <?php if (NEWAMINDisplaySetting()->StickySidebar()) echo "sticky-sidebar";  ?>  col-lg-3">
     <?php
     $position = !empty($args['position']) ? $args['position'] : 'left';
     ?>
