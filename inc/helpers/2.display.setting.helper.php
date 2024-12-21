@@ -131,6 +131,32 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
         }
         return $class;
     }
+    public function PostsSidebarPosition()
+    {
+        $option = $this->get_field($this->option_key . '_posts_sidebar_position', 'left');
+        return $option;
+    }
+    public function PostsSidebarPositionAllow($position)
+    {
+        $option = $this->PostsSidebarPosition();
+        switch ($option) {
+            case "None":
+                $allow = false;
+                break;
+            case "right":
+                $allow = $position == 'right' ? true : false;
+                break;
+            case "both_sides":
+                $allow = true;
+                break;
+            case "left":
+                $allow = $position == 'left' ? true : false;
+                break;
+            default:
+                $allow = false;
+        }
+        return $allow;
+    }
 }
 function NEWAMINDisplaySetting()
 {

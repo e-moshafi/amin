@@ -178,7 +178,7 @@ add_action('cmb2_admin_init', function () {
     ]);
     $cmb->add_field([
         'name' => __('Sidebar position', 'amin'),
-        'id' => $option_key . '_footer_sidebar_position',
+        'id' => $option_key . '_posts_sidebar_position',
         'type' => 'select',
         'default' => 'left',
         'options' => [
