@@ -1,9 +1,16 @@
 <?php
 global $wp_query;
-if ($wp_query->have_posts()):
-    while ($wp_query->have_posts()): $wp_query->the_post();
-    ?>
+?>
+<div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
+
+
     <?php
-    endwhile;
-else:
-endif;
+    if ($wp_query->have_posts()):
+        while ($wp_query->have_posts()): $wp_query->the_post();
+            get_template_part('template-parts/archive/items/loop');
+        endwhile;
+    ?>
+</div>
+<?php
+    else:
+    endif;
