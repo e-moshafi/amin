@@ -3,7 +3,7 @@
 
 
 <div class="container">
-    
+    <?php echo get_template_part('template-parts/archive') ?>
 </div>
 
    
