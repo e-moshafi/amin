@@ -13,5 +13,21 @@ function amin_footer_widgets_area()
             'after_title' => '</div>',
         ));
     }
+    register_sidebar(array(
+        'name' => __('left Sidebar', 'amin'),
+        'id' => 'left-sidebar',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="widget-title">',
+        'after_title' => '</div>',
+    ));
+    register_sidebar(array(
+        'name' => __('right Sidebar', 'amin'),
+        'id' => 'right-sidebar',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="widget-title">',
+        'after_title' => '</div>',
+    ));
 }
 add_action('widgets_init', 'amin_footer_widgets_area');
