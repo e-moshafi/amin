@@ -9,11 +9,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
             <?php
             if ($DisplaySetting->PostsSidebarPositionAllow('right')):
             ?>
-                <div class="sidebar sticky-sidebar col-lg-3">
-
-                    <?php get_sidebar('right'); ?>
-
-                </div>
+                <?php get_sidebar('right'); ?>
             <?php endif; ?>
             <div class="content col-lg">
                 <?php echo get_template_part('template-parts/archive') ?>
@@ -21,10 +17,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
             <?php
             if ($DisplaySetting->PostsSidebarPositionAllow('left')):
             ?>
-                <div class="sidebar sticky-sidebar col-lg-3">
-
-                    <?php get_sidebar('left'); ?>
-                </div>
+                <?php get_sidebar('left'); ?>
             <?php endif; ?>
         </div>
     </div>
