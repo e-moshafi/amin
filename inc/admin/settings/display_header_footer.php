@@ -189,6 +189,18 @@ add_action('cmb2_admin_init', function () {
         ]
     ]);
     $cmb->add_field([
+        'name' => __('Sidebar position in single', 'amin'),
+        'id' => $option_key . '_post_sidebar_position',
+        'type' => 'select',
+        'default' => 'left',
+        'options' => [
+            'none'=>__('None','amin'),
+            'right' => __('Right', 'amin'),
+            'both_sides' => __('both sides', 'amin'),
+            'left' => __('Left', 'amin'),
+        ]
+    ]);
+    $cmb->add_field([
         'name' => __('Sticky Sidebar', 'amin'),
         'id' => $option_key . '_sidebar_sticky',
         'type' => 'checkbox',
