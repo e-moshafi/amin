@@ -10,6 +10,7 @@
             $categories = get_the_category();
             if (!empty($categories)):
                 foreach ($categories as $category):
+                    if($category->term_id==1) continue;
             ?>
                     <span class="post-meta-category"><a href="<?php echo  esc_url( get_category_link( $category->term_id )) ?>"><?php echo esc_html( $category->name ) ?></a></span>
             <?php
