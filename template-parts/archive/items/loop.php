@@ -19,7 +19,7 @@
         </div>
         <div class="post-item-description">
             <span class="post-meta-date"><i class="fa fa-calendar-o"></i><?php echo jdate('d F Y', strtotime(get_the_date('Y-m-d h:i:s'))) ?></span>
-            <span class="post-meta-comments"><a href="<?php the_permalink() ?>#comment"><i class="fa fa-comments-o"></i><?php echo __('comment','amin').' '.get_comments_number() ?></a></span>
+            <span class="post-meta-comments"><a href="<?php the_permalink() ?>#comments"><i class="fa fa-comments-o"></i><?php echo __('comment','amin').' '.get_comments_number() ?></a></span>
             <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
             <?php the_excerpt() ?>
             <a href="<?php the_permalink() ?>" class="item-link"><?php echo __('read more', 'amin') ?><i class="icon-chevron-left"></i></a>
