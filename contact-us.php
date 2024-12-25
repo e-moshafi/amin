@@ -20,10 +20,13 @@ $ContactUsSetting = NEWAMINContactUsSetting();
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="text-uppercase">در تماس باشید</h3>
-                <p>شادترین زمان روز!. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با
-                    تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.</p>
                 <div class="m-t-30">
-                    <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
+                    <?php 
+                    if(isset($_POST['contact_us_submit'])){
+
+                    }
+                    ?>
+                    <form class="widget-contact-form"  action="" role="form"
                         method="post">
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -41,7 +44,7 @@ $ContactUsSetting = NEWAMINContactUsSetting();
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="subject">موضوع شما</label>
-                                <input type="text" name="widget-contact-form-subject" required
+                                <input type="text"  name="widget-contact-form-subject" required
                                     class="form-control required" placeholder="موضوع ...">
                             </div>
                         </div>
@@ -51,7 +54,7 @@ $ContactUsSetting = NEWAMINContactUsSetting();
                                 class="form-control required" placeholder="پیام خود را بنویسید"></textarea>
                         </div>
 
-                        <button class="btn" type="submit" id="form-submit"><i
+                        <button class="btn" type="submit" name="contact_us_submit" id="form-submit"><i
                                 class="fa fa-paper-plane"></i>&nbsp;ارسال پیام</button>
                     </form>
                 </div>
