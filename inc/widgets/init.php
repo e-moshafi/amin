@@ -11,5 +11,6 @@ function register_amin_wp_widget() {
     register_widget( 'AminContactInformationWpWidgets' );
     register_widget( 'AminCarouselPostWpWidgets' );
     register_widget( 'AminLastPostWpWidgets' );
+    register_widget( 'AminListWpWidgets' );
 }
 add_action( 'widgets_init', 'register_amin_wp_widget' );
