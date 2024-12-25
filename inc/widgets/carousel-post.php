@@ -43,7 +43,7 @@ class AminCarouselPostWpWidgets extends WP_Widget
                                 <span class="post-meta-comments"><a href="<?php the_permalink($post_data->ID) ?>#comments"><i class="fa fa-comments-o"></i><?php echo __('Comment') . ' ' . get_comments_number($post_data->ID) ?></a></span>
 
                                 <?php
-                                $categories = get_the_category();
+                                $categories = get_the_category($post_data->ID);
                                 if (!empty($categories)):
                                     foreach ($categories as $category):
                                         if ($category->term_id == 1) continue;
