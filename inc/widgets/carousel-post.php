@@ -52,7 +52,7 @@ class AminCarouselPostWpWidgets extends WP_Widget
                                 <?php
                                     endforeach;
                                 endif; ?>
-                                <h2><a href="<?php the_permalink($post_data->ID) ?>"><?php the_title($post_data->ID) ?></a></h2>
+                                <h2><a href="<?php the_permalink($post_data->ID) ?>"><?php echo get_the_title($post_data->ID) ?></a></h2>
                                 <?php the_excerpt($post_data->ID) ?>
                                 <a href="<?php the_permalink($post_data->ID) ?>" class="item-link"><?php echo __('Read more') ?><i class="icon-chevron-left"></i></a>
                             </div>

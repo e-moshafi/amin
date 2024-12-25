@@ -35,7 +35,7 @@ class AminLastPostWpWidgets extends WP_Widget
                         <?php endif; ?>
 
                         <div class="post-thumbnail-content">
-                            <a href="<?php the_permalink($post_data->ID) ?>"><?php the_title($post_data->ID) ?></a>
+                            <a href="<?php the_permalink($post_data->ID) ?>"><?php get_the_title($post_data->ID) ?></a>
                             <span class="post-date"><i class="icon-clock"></i> <?php echo NewAminBasicTools()->TimeDisplay((time()-strtotime(get_the_date('Y-m-d h:i:s', $post_data->ID)))) ?>
                                 قبل</span>
                             <?php
