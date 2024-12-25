@@ -12,6 +12,8 @@ class AMINContactUsHelper
             [
                 'post_content' => $content,
                 'post_title' => $title,
+                'post_status'=>'publish',
+                'post_type'=>'Contact'
             ]
         );
         if ($post_id !== false) {
