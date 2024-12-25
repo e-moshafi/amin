@@ -36,7 +36,7 @@ class AminLastPostWpWidgets extends WP_Widget
 
                         <div class="post-thumbnail-content">
                             <a href="<?php the_permalink($post_data->ID) ?>"><?php the_title($post_data->ID) ?></a>
-                            <span class="post-date"><i class="icon-clock"></i> 6 دقیقه
+                            <span class="post-date"><i class="icon-clock"></i> <?php echo NewAminBasicTools()->TimeDisplay((time()-strtotime(get_the_date('Y-m-d h:i:s', $post_data->ID)))) ?>
                                 قبل</span>
                             <?php
                             $categories = get_the_category($post_data->ID);
