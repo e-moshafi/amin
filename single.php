@@ -11,7 +11,6 @@ $DisplaySetting = NEWAMINDisplaySetting();
             ?>
                 <?php get_sidebar('right'); ?>
             <?php endif; ?>
-            <div class="content col-lg">
                 <div class="content col-lg-9">
 
                     <div id="blog" class="single-post">
@@ -37,7 +36,6 @@ $DisplaySetting = NEWAMINDisplaySetting();
 
                     </div>
                 </div>
-            </div>
             <?php
             if ($DisplaySetting->PostsSidebarPositionAllow('left', true)):
             ?>
