@@ -22,7 +22,7 @@
             <span class="post-meta-comments"><a href="<?php the_permalink() ?>#comments"><i class="fa fa-comments-o"></i><?php echo __('comment','amin').' '.get_comments_number() ?></a></span>
             <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
             <?php the_excerpt() ?>
-            <a href="<?php the_permalink() ?>" class="item-link"><?php echo __('read more', 'amin') ?><i class="icon-chevron-left"></i></a>
+            <a href="<?php the_permalink() ?>" class="item-link"><?php echo __('Read more') ?><i class="icon-chevron-left"></i></a>
         </div>
     </div>
 </div>
