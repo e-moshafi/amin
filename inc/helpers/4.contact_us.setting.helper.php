@@ -1,5 +1,5 @@
 <?php
-class AMINContactUsHelper extends AMINSettingHelper
+class AMINContactUsSettingHelper extends AMINSettingHelper
 {
     private $option_key = 'contact_us_settings_amin';
     public function __construct()
@@ -23,7 +23,7 @@ class AMINContactUsHelper extends AMINSettingHelper
         return $option;
     }
 }
-function NEWAMINContactUs()
+function NEWAMINContactUsSetting()
 {
-    return new AMINContactUsHelper();
+    return new AMINContactUsSettingHelper();
 }
