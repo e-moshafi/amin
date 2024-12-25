@@ -38,4 +38,9 @@ add_action('cmb2_admin_init', function () {
         'id'   => $option_key . '_google_map_api',
         'type' => 'text',
     ));
+    $cmb->add_field(array(
+        'name' => esc_html__('Google map api', 'amin'),
+        'id'   => $option_key . '_google_map_lan_lon',
+        'type' => 'text',
+    ));
 });
