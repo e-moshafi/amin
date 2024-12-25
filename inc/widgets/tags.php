@@ -19,18 +19,22 @@ class AminTagsWpWidgets extends WP_Widget
         if (! empty($instance['title'])) {
             echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
         }
-        $count=! empty($instance['count']) ? $instance['count'] :10;
+        $count = ! empty($instance['count']) ? $instance['count'] : 10;
         $allTags = get_tags(); //gets all the tags
 ?>
         <div class="tags">
             <?php
-            foreach ($allTags as $tag) {
-                ?>
-                <a href="<?php echo esc_url(get_tag_link($tag->term_id)) ?>"><?php echo esc_html($tag->name) ?></a>
-                <?php
-            }
+            foreach ($allTags as $key_tag => $tag) {
             ?>
-         
+                <a href="<?php echo esc_url(get_tag_link($tag->term_id)) ?>"><?php echo esc_html($tag->name) ?></a>
+            <?php
+                if ($key_tag + 1 > $count) {
+                    break;
+                }
+            }
+
+            ?>
+
         </div>
     <?php
         echo $args['after_widget'];
@@ -40,7 +44,7 @@ class AminTagsWpWidgets extends WP_Widget
     public function form($instance)
     {
         $title = ! empty($instance['title']) ? $instance['title'] : __('Tag');
-        $count=! empty($instance['count']) ? $instance['count'] :10;
+        $count = ! empty($instance['count']) ? $instance['count'] : 10;
     ?>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:')); ?></label>
@@ -48,7 +52,7 @@ class AminTagsWpWidgets extends WP_Widget
         </p>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php _e(esc_attr('Count:')); ?></label>
-            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('count')); ?>" name="<?php echo esc_attr($this->get_field_name('count')); ?>" type="text" value="<?php echo esc_attr($count); ?>" min=5>
+            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('count')); ?>" name="<?php echo esc_attr($this->get_field_name('count')); ?>" type="number" value="<?php echo esc_attr($count); ?>" min=5>
         </p>
 <?php
     }
@@ -58,6 +62,8 @@ class AminTagsWpWidgets extends WP_Widget
     {
         $instance = array();
         $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
+        $instance['count'] = (! empty($new_instance['count'])) ? strip_tags($new_instance['count']) : 10;
+
         return $instance;
     }
 }
