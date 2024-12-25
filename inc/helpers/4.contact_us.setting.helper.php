@@ -6,7 +6,7 @@ class AMINContactUsSettingHelper extends AMINSettingHelper
     public $Phone;
     public $Email;
     public $WorkingTime;
-    public $LanLon;
+    public $LatLon;
     public function __construct()
     {
         $this->settings = $this->get_settings($this->option_key);
@@ -14,7 +14,7 @@ class AMINContactUsSettingHelper extends AMINSettingHelper
         $this->GetPhone();
         $this->GetEmail();
         $this->GetWorkingTime();
-        $this->GetGoogleMapLanLon();
+        $this->GetGoogleMapLatLon();
     }
     public function GetAddress()
     {
@@ -45,10 +45,10 @@ class AMINContactUsSettingHelper extends AMINSettingHelper
         $option = $this->get_field($this->option_key . '_google_map_api');
         return $option;
     }
-    public function GetGoogleMapLanLon()
+    public function GetGoogleMapLatLon()
     {
-        $option = $this->get_field($this->option_key . '_google_map_lan_lon');
-        $this->LanLon = $option;
+        $option = $this->get_field($this->option_key . '_google_map_lat_lon');
+        $this->LatLon = $option;
         return $option;
     }
 }

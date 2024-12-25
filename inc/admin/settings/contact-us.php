@@ -39,8 +39,8 @@ add_action('cmb2_admin_init', function () {
         'type' => 'text',
     ));
     $cmb->add_field(array(
-        'name' => esc_html__('Google map api', 'amin'),
-        'id'   => $option_key . '_google_map_lan_lon',
+        'name' => esc_html__('Google map latitude & longitude', 'amin'),
+        'id'   => $option_key . '_google_map_lat_lon',
         'type' => 'text',
     ));
 });
