@@ -26,10 +26,10 @@ class AminSearchWpWidgets extends WP_Widget
     // فرم تنظیمات ابزارک در پیشخوان
     public function form($instance)
     {
-        $title = ! empty($instance['title']) ? $instance['title'] : __('Search');
+        $title = ! empty($instance['title']) ? $instance['title'] : __('Search','amin');
     ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>">
         </p>
 

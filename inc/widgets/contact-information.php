@@ -47,7 +47,7 @@ class AminContactInformationWpWidgets extends WP_Widget
     // فرم تنظیمات ابزارک در پیشخوان
     public function form($instance)
     {
-        $title = ! empty($instance['title']) ? $instance['title'] : __('Contact us');
+        $title = ! empty($instance['title']) ? $instance['title'] : __('Contact us','amin');
         $address = ! empty($instance['address']) ? $instance['address'] : '';
         $phone = ! empty($instance['phone']) ? $instance['phone'] : '';
         $email = ! empty($instance['email']) ? $instance['email'] : '';
@@ -55,23 +55,23 @@ class AminContactInformationWpWidgets extends WP_Widget
 
     ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('address')); ?>"><?php _e(esc_attr('Address:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('address')); ?>"><?php _e(esc_attr('Address:','amin')); ?></label>
             <textarea class="widefat" name="<?php echo esc_attr($this->get_field_name('address')); ?>" id="<?php echo esc_attr($this->get_field_id('address')); ?>"><?php echo esc_attr($address); ?></textarea>
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('phone')); ?>"><?php _e(esc_attr('Phone:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('phone')); ?>"><?php _e(esc_attr('Phone:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('phone')); ?>" name="<?php echo esc_attr($this->get_field_name('phone')); ?>" type="text" value="<?php echo esc_attr($phone); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e(esc_attr('Email:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e(esc_attr('Email:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('email')); ?>" name="<?php echo esc_attr($this->get_field_name('email')); ?>" type="text" value="<?php echo esc_attr($email); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('working_time')); ?>"><?php _e(esc_attr('Working time:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('working_time')); ?>"><?php _e(esc_attr('Working time:','amin')); ?></label>
             <textarea class="widefat" name="<?php echo esc_attr($this->get_field_name('working_time')); ?>" id="<?php echo esc_attr($this->get_field_id('working_time')); ?>"><?php echo esc_attr($working_time); ?></textarea>
         </p>
 <?php

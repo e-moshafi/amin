@@ -75,11 +75,11 @@ class AminCarouselPostWpWidgets extends WP_Widget
         $count = ! empty($instance['count']) ? $instance['count'] : 10;
         ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e(esc_attr('Title:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>">
         </p>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php _e(esc_attr('Count:')); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php _e(esc_attr('Count:','amin')); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id('count')); ?>" name="<?php echo esc_attr($this->get_field_name('count')); ?>" type="number" value="<?php echo esc_attr($count); ?>" min=5>
         </p>
 
