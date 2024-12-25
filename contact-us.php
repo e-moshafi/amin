@@ -21,13 +21,27 @@ $ContactUsSetting = NEWAMINContactUsSetting();
             <div class="col-lg-6">
                 <h3 class="text-uppercase">در تماس باشید</h3>
                 <div class="m-t-30">
-                    <?php 
-                    if(isset($_POST['contact_us_submit'])){
-
+                    <?php
+                    if (isset($_POST['contact_us_submit'])) {
+                        $arr = [
+                            'name' => $_POST['widget-contact-form-name'],
+                            'email' => $_POST['widget-contact-form-email'],
+                            'title' => $_POST['widget-contact-form-subject'],
+                            'content' => $_POST['widget-contact-form-message'],
+                        ];
+                        $sumbit_contact_id = AMINContactUsHelper()->InsertSafy($arr);
+                        if ($sumbit_contact_id !== false) {
+                    ?>
+                            <div class="alert alert-success w-100">پیام شما به دست ما رسید.</div>
+                        <?php
+                        } else {
+                        ?>
+                            <div class="alert alert-danger w-100">پیام شما به دست ما نرسید. انگار یه مشکلی هستش!</div>
+                    <?php
+                        }
                     }
                     ?>
-                    <form class="widget-contact-form"  action="" role="form"
-                        method="post">
+                    <form  action=""  method="post">
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="name">نام</label>
@@ -44,7 +58,7 @@ $ContactUsSetting = NEWAMINContactUsSetting();
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="subject">موضوع شما</label>
-                                <input type="text"  name="widget-contact-form-subject" required
+                                <input type="text" name="widget-contact-form-subject" required
                                     class="form-control required" placeholder="موضوع ...">
                             </div>
                         </div>
@@ -54,7 +68,7 @@ $ContactUsSetting = NEWAMINContactUsSetting();
                                 class="form-control required" placeholder="پیام خود را بنویسید"></textarea>
                         </div>
 
-                        <button class="btn" type="submit" name="contact_us_submit" id="form-submit"><i
+                        <button class="btn" type="submit" name="contact_us_submit"><i
                                 class="fa fa-paper-plane"></i>&nbsp;ارسال پیام</button>
                     </form>
                 </div>
