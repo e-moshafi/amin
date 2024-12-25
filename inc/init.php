@@ -40,6 +40,10 @@ if (!class_exists('App_dir_require_once_' . $project_name)) {
                     'direction' => __DIR__ . '/widgets',
                     'access' => 'init.php'
                 ],
+                [
+                    'direction' => __DIR__ . '/post_types',
+                    'access' => false
+                ],
 
             ];
             return $access;
