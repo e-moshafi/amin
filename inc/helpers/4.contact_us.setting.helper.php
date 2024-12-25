@@ -16,31 +16,31 @@ class AMINContactUsSettingHelper extends AMINSettingHelper
     }
     public function GetAddress()
     {
-        $option = $this->get_field($this->option_key . '_address', 3);
+        $option = $this->get_field($this->option_key . '_address');
         $this->Address = $option;
         return $option;
     }
     public function GetPhone()
     {
-        $option = $this->get_field($this->option_key . '_phone', 3);
+        $option = $this->get_field($this->option_key . '_phone');
         $this->Phone = $option;
         return $option;
     }
     public function GetEmail()
     {
-        $option = $this->get_field($this->option_key . '_email', 3);
+        $option = $this->get_field($this->option_key . '_email');
         $this->Email = $option;
         return $option;
     }
     public function GetWorkingTime()
     {
-        $option = $this->get_field($this->option_key . '_working_time', 3);
+        $option = $this->get_field($this->option_key . '_working_time');
         $this->WorkingTime = $option;
         return $option;
     }
     public function GetGoogleMapApi()
     {
-        $option = $this->get_field($this->option_key . '_google_map_api', 3);
+        $option = $this->get_field($this->option_key . '_google_map_api');
         return $option;
     }
 }
