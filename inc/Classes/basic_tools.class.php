@@ -39,6 +39,17 @@ class AminBasicTools
             return $time . ' ' . $text;
         }
     }
+    public function DisplayGoogleMap(array|string $latlon)
+    {
+        if (is_string($latlon)) {
+            $latlon = trim($latlon);
+            $latlon = explode(',', $latlon);
+        }
+        if (count($latlon) == 2):
+           return '<div class="map" data-latitude="' . $latlon[0] . '" data-longitude="' . $latlon[1] . '" data-style="light"></div>';
+        endif;
+        return ;
+    }
 }
 function NewAminBasicTools()
 {

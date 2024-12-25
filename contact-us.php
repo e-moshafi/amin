@@ -102,13 +102,7 @@ $ContactUsSetting = NEWAMINContactUsSetting();
                     </div>
                 </div>
                 <?php if (!empty($ContactUsSetting->LatLon)):
-                    $LatLon = trim($ContactUsSetting->LatLon);
-                    $LatLon = explode(',', $LatLon);
-                    if (count($LatLon) == 2):
-                ?>
-                        <div class="map" data-latitude="<?php echo $LatLon[0] ?>" data-longitude="<?php echo $LatLon[1] ?>" data-style="light"></div>
-                <?php
-                    endif;
+                 echo   NewAminBasicTools()->DisplayGoogleMap($ContactUsSetting->LatLon);
                 endif; ?>
 
             </div>
