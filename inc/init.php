@@ -38,7 +38,7 @@ if (!class_exists('App_dir_require_once_' . $project_name)) {
                 ],
                 [
                     'direction' => __DIR__ . '/widgets',
-                    'access' => false
+                    'access' => 'init.php'
                 ],
 
             ];
