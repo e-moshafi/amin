@@ -9,3 +9,5 @@ require_once('settings/contact-us.php');
 //page meta data
 //include page setting
 require_once('posts/page.php');
+//include contact data
+require_once('posts/contact_us.php');
