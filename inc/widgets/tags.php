@@ -20,7 +20,7 @@ class AminTagsWpWidgets extends WP_Widget
             echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
         }
         $count = ! empty($instance['count']) ? $instance['count'] : 10;
-        $allTags = get_tags(); //gets all the tags
+        $allTags = get_tags(['number'=>$count]); //gets all the tags
 ?>
         <div class="tags">
             <?php
@@ -28,9 +28,6 @@ class AminTagsWpWidgets extends WP_Widget
             ?>
                 <a href="<?php echo esc_url(get_tag_link($tag->term_id)) ?>"><?php echo esc_html($tag->name) ?></a>
             <?php
-                if ($key_tag + 1 > $count) {
-                    break;
-                }
             }
 
             ?>
