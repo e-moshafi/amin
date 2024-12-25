@@ -11,7 +11,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
             ?>
                 <?php get_sidebar('right'); ?>
             <?php endif; ?>
-                <div class="content col-lg-9">
+                <div class="content col-lg">
 
                     <div id="blog" class="single-post">
 
