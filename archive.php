@@ -4,7 +4,7 @@ $DisplaySetting = NEWAMINDisplaySetting();
 ?>
 <section id="page-content">
 
-    <div class="container">
+    <div class="container<?php if ($DisplaySetting->PostsSidebarPositionAllow('right') && $DisplaySetting->PostsSidebarPositionAllow('left')) echo "-fluid" ?>">
         <div class="row">
             <?php
             if ($DisplaySetting->PostsSidebarPositionAllow('right')):
