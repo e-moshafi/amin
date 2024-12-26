@@ -24,6 +24,11 @@ $DisplaySetting = NEWAMINDisplaySetting();
                 <?php get_sidebar('right'); ?>
             <?php endif; ?>
             <div class="content col-lg">
+                <?php 
+                $wp_query=new WP_Query([
+                    'post_type'=>'post'
+                ]);
+                ?>
                 <?php echo get_template_part('template-parts/archive') ?>
             </div>
             <?php
