@@ -11,24 +11,28 @@ $menu_postion = $logo_postion == 'right' ? 'left' : 'right';
     <div class="container">
         <nav>
             <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'header-' . $menu_postion . '-menu',
-                    'container' => '',
-                    'container_class' => '',
-                    'menu_class'=>'',
-                    'walker' => new AMINStandardMenuHeader()
-                )
-            );
-            if ($logo_postion == 'middle') {
+            if (has_nav_menu('header-' . $menu_postion . '-menu')) {
                 wp_nav_menu(
                     array(
-                        'theme_location' => 'header-left-menu',
+                        'theme_location' => 'header-' . $menu_postion . '-menu',
                         'container' => '',
                         'container_class' => '',
+                        'menu_class' => '',
                         'walker' => new AMINStandardMenuHeader()
                     )
                 );
+            }
+            if ($logo_postion == 'middle') {
+                if (has_nav_menu('header-left-menu')) {
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'header-left-menu',
+                            'container' => '',
+                            'container_class' => '',
+                            'walker' => new AMINStandardMenuHeader()
+                        )
+                    );
+                }
             }
             ?>
         </nav>
