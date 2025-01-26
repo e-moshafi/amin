@@ -1,13 +1,3 @@
-<?php
-
-/**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package storefront
- */
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -17,7 +7,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
-    <!-- font - fontawesome -->
 </head>
 
 <body <?php body_class(); ?>>
