@@ -28,4 +28,10 @@
             get_template_part('template-parts/topbar', 'section');
         }
         ?>
-        <?php get_template_part('template-parts/header', 'section'); ?>
+        <?php
+        if (function_exists('elementor_theme_do_location') && elementor_theme_do_location('header')) :
+            elementor_theme_do_location('header');
+        else:
+            get_template_part('template-parts/header', 'section');
+        endif;
+        ?>
