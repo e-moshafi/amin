@@ -18,7 +18,7 @@ class AMINGenralSettingHelper extends AMINSettingHelper
     }
     public function CopyRightText()
     {
-        $option = $this->get_field("footer_copyright",'center');
+        $option = $this->get_field("footer_copyright");
         return $option;
     }
 }
