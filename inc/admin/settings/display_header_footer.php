@@ -205,19 +205,19 @@ add_action('cmb2_admin_init', function () {
         'id' => $option_key . '_sidebar_sticky',
         'type' => 'checkbox',
     ]);
-    $cmb->add_field([
-        'name' => __('Page', 'amin'),
-        'id' => $option_key . '_page',
-        'type' => 'title'
-    ]);
-    $cmb->add_field([
-        'name' => __('Show Title', 'amin'),
-        'id' => $option_key . 'page_show_title',
-        'type' => 'checkbox',
-    ]);
-    $cmb->add_field([
-        'name' => __('Container', 'amin'),
-        'id' => $option_key . 'page_container',
-        'type' => 'checkbox',
-    ]);
+    // $cmb->add_field([
+    //     'name' => __('Page', 'amin'),
+    //     'id' => $option_key . '_page',
+    //     'type' => 'title'
+    // ]);
+    // $cmb->add_field([
+    //     'name' => __('Show Title', 'amin'),
+    //     'id' => $option_key . 'page_show_title',
+    //     'type' => 'checkbox',
+    // ]);
+    // $cmb->add_field([
+    //     'name' => __('Container', 'amin'),
+    //     'id' => $option_key . 'page_container',
+    //     'type' => 'checkbox',
+    // ]);
 });

@@ -88,18 +88,18 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
     {
         if ($ID == 0) $ID = get_the_ID();
         $option = get_post_meta($ID, 'page_show_title', 1);
-        if (empty($option)) {
-            $option = $this->get_field($this->option_key . 'page_show_title');
-        }
+        // if (empty($option)) {
+        //     $option = $this->get_field($this->option_key . 'page_show_title');
+        // }
         return $option == 'on';
     }
     public function PageContainer($ID = 0)
     {
         if ($ID == 0) $ID = get_the_ID();
         $option = get_post_meta($ID, 'page_container', 1);
-        if (empty($option)) {
-            $option = $this->get_field($this->option_key . 'page_container');
-        }
+        // if (empty($option)) {
+        //     $option = $this->get_field($this->option_key . 'page_container');
+        // }
         return $option == 'on';
     }
     public function PostsStyle()
