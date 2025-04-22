@@ -155,6 +155,7 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
                 $option_key = 'post_sidebar_position';
         }
         $option = get_post_meta($ID, $option_key, 1);
+        if ($option == 'default') $option = $this->PostsSidebarPosition(true);
         if (empty($option)) $option = 'left';
         return $option;
     }
