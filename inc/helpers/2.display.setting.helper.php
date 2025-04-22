@@ -133,16 +133,38 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
     }
     public function PostsSidebarPosition($single = false)
     {
-        if ($single===false) {
+        if ($single === false) {
             $option = $this->get_field($this->option_key . '_posts_sidebar_position', 'left');
         } else {
             $option = $this->get_field($this->option_key . '_post_sidebar_position', 'left');
         }
         return $option;
     }
-    public function PostsSidebarPositionAllow($position,$single=false)
+    public function PostSidebarPosition($ID = 0)
     {
-        $option = $this->PostsSidebarPosition($single);
+        if ($ID == 0) $ID = get_the_ID();
+        $post_type = get_post_type($ID);
+        switch ($post_type) {
+            case "page":
+                $option_key = 'page_sidebar_position';
+                break;
+            case "post":
+                $option_key = 'post_sidebar_position';
+                break;
+            default:
+                $option_key = 'post_sidebar_position';
+        }
+        $option = get_post_meta($ID, $option_key, 1);
+        if (empty($option)) $option = 'left';
+        return $option;
+    }
+    public function PostsSidebarPositionAllow($position, $single = false)
+    {
+        if (is_bool($single)) {
+            $option = $this->PostsSidebarPosition($single);
+        } elseif (is_int($single)) {
+            $option = $this->PostSidebarPosition($single);
+        }
         switch ($option) {
             case "None":
                 $allow = false;

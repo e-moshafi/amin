@@ -23,8 +23,27 @@ $DisplaySettingHelper = NEWAMINDisplaySetting();
 <?php endif; ?>
 
 <section>
-    <div class="container<?php if(!$DisplaySettingHelper->PageContainer()) echo "-fluid" ; ?>">
-        <?php the_content() ?>
+    <div class="container<?php if (!$DisplaySettingHelper->PageContainer() || ($DisplaySettingHelper->PostsSidebarPositionAllow('right', get_the_ID()) && $DisplaySettingHelper->PostsSidebarPositionAllow('left', get_the_ID()))) echo "-fluid"; ?>">
+        <?php if (!($DisplaySettingHelper->PostsSidebarPositionAllow('right', get_the_ID()) || $DisplaySettingHelper->PostsSidebarPositionAllow('left', get_the_ID()))) : ?>
+            <?php the_content() ?>
+        <?php endif; ?>
+        <?php if ($DisplaySettingHelper->PostsSidebarPositionAllow('right', get_the_ID()) || $DisplaySettingHelper->PostsSidebarPositionAllow('left', get_the_ID())) : ?>
+            <div class="row">
+                <?php
+                if ($DisplaySettingHelper->PostsSidebarPositionAllow('right', true)):
+                ?>
+                    <?php get_sidebar('right'); ?>
+                <?php endif; ?>
+                <div class="content col-lg">
+                    <?php the_content() ?>
+                </div>
+                <?php
+                if ($DisplaySettingHelper->PostsSidebarPositionAllow('left', true)):
+                ?>
+                    <?php get_sidebar('left'); ?>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
 
