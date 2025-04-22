@@ -160,13 +160,14 @@ class AMINDisplaySettingHelper extends AMINSettingHelper
     }
     public function PostsSidebarPositionAllow($position, $single = false)
     {
+        $option = "none";
         if (is_bool($single)) {
             $option = $this->PostsSidebarPosition($single);
         } elseif (is_int($single)) {
             $option = $this->PostSidebarPosition($single);
         }
         switch ($option) {
-            case "None":
+            case "none":
                 $allow = false;
                 break;
             case "right":
